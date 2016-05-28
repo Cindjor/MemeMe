@@ -465,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Em0-I4-9LI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1947" y="1236"/>
+            <point key="canvasLocation" x="1949" y="1248"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fYL-gA-yv3">
@@ -491,6 +491,6 @@
         <image name="checkmark" width="490" height="490"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZAu-Up-SQe"/>
+        <segue reference="TGQ-7l-VCs"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -36,11 +36,12 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var navbar: UINavigationBar!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
-    @IBOutlet weak var shareButton: UIBarButtonItem? {
-        didSet {
-            shareButton?.enabled = isSharingEnabled()
-        }
-    }
+    @IBOutlet weak var shareButton: UIBarButtonItem?
+//        {
+//        didSet {
+//            shareButton?.enabled = isSharingEnabled()
+//        }
+//    }
     
     // both private views set in viewDidLoad rather than storyboard
     // because it is simpler to configure these in code.
@@ -67,6 +68,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         
         // if no images are available, we'll display an empty imageview
         imageView = UIImageView()
+        imageView.contentMode = UIViewContentMode.ScaleAspectFit
         
         // scroll view will cover entire view, we expect to cover entire device display
         scrollView = UIScrollView(frame: view.bounds)
@@ -177,6 +179,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         imageView.frame.origin = CGPoint(x: 0.0, y: 0.0)
         scrollView.contentSize = imageView.bounds.size
         setZoomParametersForSize(scrollView.bounds.size)
+        
     }
     
     func recenterWithScrollViewOrigin() {
@@ -360,6 +363,7 @@ extension MemeEditorViewController: UIImagePickerControllerDelegate {
             imageView.image = image
             layoutImageView()
             updateModelFromDisplay()
+            self.isSharingEnabled()
         }
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
