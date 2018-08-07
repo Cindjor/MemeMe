@@ -3,7 +3,7 @@
 //  MemeMeTests
 //
 //  Created by Luke CHEUNG on 5/18/16.
-//  Copyright © 2016 Luke Cheung. All rights reserved.
+//  Copyright © 2016 LuCH. All rights reserved.
 //
 
 import XCTest
